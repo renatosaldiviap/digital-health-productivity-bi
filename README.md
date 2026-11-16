@@ -11,13 +11,9 @@ This project builds an interactive Business Intelligence solution designed to me
 
 Using **Power Query** and **Power BI (DAX)**, raw survey records were cleaned and modeled to isolate critical exposure thresholds and quantify the protective effect of physical activity against digital burnout.
 
----
-
 ## 🖼️ Dashboard Preview
 
 ![Dashboard Preview](dashboard_preview.png)
-
----
 
 ## 🛠️ Tech Stack & Architecture
 
@@ -29,7 +25,7 @@ Using **Power Query** and **Power BI (DAX)**, raw survey records were cleaned an
 [ Cleaned CSV (3,500 rows) ] ──► [ Power Query ETL ] ──► [ Power BI Tabular Model ] ──► [ DAX Executive Dashboard ]
 ```
 
-📐 Core DAX Measures
+## 📐 Core DAX Measures
 Business logic and burnout risk KPIs were built directly into the 'Salud y Bienestar' reporting model:
 
 - Total Evaluated Cases:
@@ -57,12 +53,12 @@ DIVIDE([Casos Alto Riesgo], [Total Evaluados], 0)
 Prom Horas Pantalla = AVERAGE('Salud y Bienestar'[device_hours_per_day])
 ```
 
-💡 Key Business Insights
+## 💡 Key Business Insights
 1. Critical Screen Exposure Threshold: Burnout risk probability escalates sharply above 10 hours of daily device usage, jumping from baseline rates under 15% to over 60% (reaching 100% in peak exposure ranges).
 2. Sleep & Recovery Deficit: High-risk profiles average nearly 1 hour less sleep per night (6.5h vs. 7.4h) and score 21% lower in reported sleep quality.
 3. The Exercise Buffer: Regular physical activity (5+ days/week) produces a measurable drop in baseline stress scores and stabilizes sleep quality above 2.8 / 4.0.
 
-📁 Repository Structure
+## 📁 Repository Structure
 ```text
 ├── DSH_Salud_Digital_Bienestar_v1.0.pbix
 ├── salud_digital_bienestar_raw.csv
